@@ -1,0 +1,19 @@
+{
+    "namespace": "payments.datamodel",
+    "type": "record",
+    "name": "Payment",
+    "fields":[
+         {
+            "name": "from",
+            "type": "string"
+         },
+         {
+            "name": "to",
+            "type": "string"
+         },
+         {
+            "name": "value",
+            "type": "long"
+         }
+    ]
+}

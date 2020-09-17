@@ -1,0 +1,16 @@
+{
+    "namespace": "payments.datamodel",
+    "type": "record",
+    "name": "LogMessage",
+    "fields":[
+         {
+            "name": "reason", "type": "string"
+         },
+         {
+            "name": "message", "type": "string"
+         },
+         {
+            "name": "level", "type": "string"
+         }
+    ]
+}
