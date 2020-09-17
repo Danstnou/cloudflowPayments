@@ -1,4 +1,4 @@
-package payments.postman
+package payments.initialize
 
 import cloudflow.akkastream._
 import cloudflow.akkastream.util.scaladsl._

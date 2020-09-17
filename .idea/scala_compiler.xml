@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ScalaCompilerConfiguration">
     <profile name="sbt 1" modules="taxi-ride_3544" />
-    <profile name="sbt 2" modules="checking,datamodel,ingestor,logger,payments,postman,processor,taxi-ride-fare">
+    <profile name="sbt 2" modules="checking,datamodel,ingestor,initialize,logger,payments,postman,processor,taxi-ride-fare">
       <option name="deprecationWarnings" value="true" />
       <option name="uncheckedWarnings" value="true" />
       <option name="featureWarnings" value="true" />

@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "d097a8fd-37f3-40f2-b174-9f29b7ef2535",
+		"name": "initialial-state-http-processor",
+		"description": "Инициализация состояния (участников)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "parpicipant-1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : {{id}} , \"balance\" : {{balance}}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				},
+				"description": "Инициализация участника: 1"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "4bab9f65-f2d3-4bf4-862e-501394937bb5",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "67e02cc4-4000-4c98-b3db-101431d95610",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "8f5f1013-c1b7-43d1-b0f9-da3bf0fe7d0d",
+			"key": "id",
+			"value": "\"a1\""
+		},
+		{
+			"id": "f327fb93-27fa-49eb-a233-7431318619cc",
+			"key": "balance",
+			"value": "500"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

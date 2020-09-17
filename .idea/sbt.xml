@@ -10,9 +10,9 @@
             <option value="$PROJECT_DIR$/checking" />
             <option value="$PROJECT_DIR$/datamodel" />
             <option value="$PROJECT_DIR$/ingestor" />
+            <option value="$PROJECT_DIR$/initialize" />
             <option value="$PROJECT_DIR$/logger" />
             <option value="$PROJECT_DIR$/payments-pipeline" />
-            <option value="$PROJECT_DIR$/postman" />
             <option value="$PROJECT_DIR$/processor" />
             <option value="$PROJECT_DIR$/project" />
           </set>

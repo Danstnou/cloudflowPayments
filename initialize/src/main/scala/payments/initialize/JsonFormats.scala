@@ -1,6 +1,4 @@
-package payments.postman
-
-import java.util.UUID
+package payments.initialize
 
 import spray.json._
 import payments.datamodel._

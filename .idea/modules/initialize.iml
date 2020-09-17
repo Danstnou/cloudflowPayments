@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id="postman [file:/C:/Users/danel/IdeaProjects/cloudflowPayments/]" external.linked.project.path="$MODULE_DIR$/../../postman" external.root.project.path="$MODULE_DIR$/../.." external.system.id="SBT" type="JAVA_MODULE" version="4">
+<module external.linked.project.id="initialize [file:/C:/Users/danel/IdeaProjects/cloudflowPayments/]" external.linked.project.path="$MODULE_DIR$/../../initialize" external.root.project.path="$MODULE_DIR$/../.." external.system.id="SBT" type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/../../postman/target/scala-2.12/classes" />
     <output-test url="file://$MODULE_DIR$/../../postman/target/scala-2.12/test-classes" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../postman">
-      <sourceFolder url="file://$MODULE_DIR$/../../postman/src/main/scala" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../postman/src/main/resources" type="java-resource" />
-      <excludeFolder url="file://$MODULE_DIR$/../../postman/target/avro" />
-      <excludeFolder url="file://$MODULE_DIR$/../../postman/target/streams" />
+    <content url="file://$MODULE_DIR$/../../initialize">
+      <sourceFolder url="file://$MODULE_DIR$/../../initialize/src/main/scala" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../initialize/src/main/resources" type="java-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/../../initialize/target/avro" />
+      <excludeFolder url="file://$MODULE_DIR$/../../initialize/target/streams" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
