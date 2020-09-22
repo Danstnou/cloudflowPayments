@@ -28,8 +28,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ff5690c-9d02-460d-9801-e45d36dd0a02" name="Default Changelist" comment="поправил процессор, убрал лишнее и добавил проект Postman">
-      <change afterPath="$PROJECT_DIR$/CODEOWNERS" afterDir="false" />
+    <list default="true" id="6ff5690c-9d02-460d-9801-e45d36dd0a02" name="Default Changelist" comment="добавлен ревьюер">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -157,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600355445068</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="добавлен ревьюер">
+      <created>1600789330969</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1600789330969</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -228,7 +234,8 @@
     <MESSAGE value="initial commit" />
     <MESSAGE value="поправил процессор, и убрал лишнее" />
     <MESSAGE value="поправил процессор, убрал лишнее и добавил проект Postman" />
-    <option name="LAST_COMMIT_MESSAGE" value="поправил процессор, убрал лишнее и добавил проект Postman" />
+    <MESSAGE value="добавлен ревьюер" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавлен ревьюер" />
   </component>
   <component name="WindowStateProjectService">
     <state x="312" y="0" key="#Project_Structure" timestamp="1600275785679">
@@ -267,13 +274,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="510" y="146" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600347483733" />
+    <state x="624" y="171" key="RollbackChangesDialog" timestamp="1600789961642">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="624" y="171" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600789961642" />
     <state x="336" y="0" key="SettingsEditor" timestamp="1600346823117">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="336" y="0" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1600346823117" />
-    <state x="452" y="186" key="Vcs.Push.Dialog.v2" timestamp="1600355454950">
+    <state x="452" y="186" key="Vcs.Push.Dialog.v2" timestamp="1600789343858">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="452" y="186" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600355454950" />
+    <state x="452" y="186" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600789343858" />
   </component>
 </project>
