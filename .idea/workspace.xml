@@ -28,21 +28,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ff5690c-9d02-460d-9801-e45d36dd0a02" name="Default Changelist" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/initialize/src/main/resources/initialial-state-http-processor.postman_collection.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/cloudflowPayments-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/cloudflowPayments-build.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/postman.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/initialize.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sbt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sbt.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
+    <list default="true" id="6ff5690c-9d02-460d-9801-e45d36dd0a02" name="Default Changelist" comment="поправил процессор, убрал лишнее и добавил проект Postman">
+      <change afterPath="$PROJECT_DIR$/CODEOWNERS" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/payments-pipeline/src/main/blueprint/blueprint.conf" beforeDir="false" afterPath="$PROJECT_DIR$/payments-pipeline/src/main/blueprint/blueprint.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postman/src/main/scala/payments/postman/JsonFormats.scala" beforeDir="false" afterPath="$PROJECT_DIR$/initialize/src/main/scala/payments/initialize/JsonFormats.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postman/src/main/scala/payments/postman/ParticipantInitializeIngress.scala" beforeDir="false" afterPath="$PROJECT_DIR$/initialize/src/main/scala/payments/initialize/ParticipantInitializeIngress.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postman/target/scala-2.12/update/update_cache_2.12/inputs" beforeDir="false" afterPath="$PROJECT_DIR$/initialize/target/scala-2.12/update/update_cache_2.12/inputs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/postman/target/scala-2.12/update/update_cache_2.12/output" beforeDir="false" afterPath="$PROJECT_DIR$/initialize/target/scala-2.12/update/update_cache_2.12/output" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/processor/src/main/scala/payments/processor/PaymentProcessingStreamlet.scala" beforeDir="false" afterPath="$PROJECT_DIR$/processor/src/main/scala/payments/processor/PaymentProcessingStreamlet.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600348242604</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="поправил процессор, убрал лишнее и добавил проект Postman">
+      <created>1600355445068</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1600355445068</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -231,7 +226,9 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="поправил процессор, и убрал лишнее" />
+    <MESSAGE value="поправил процессор, убрал лишнее и добавил проект Postman" />
+    <option name="LAST_COMMIT_MESSAGE" value="поправил процессор, убрал лишнее и добавил проект Postman" />
   </component>
   <component name="WindowStateProjectService">
     <state x="312" y="0" key="#Project_Structure" timestamp="1600275785679">
@@ -242,6 +239,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="687" y="264" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1600338603372" />
+    <state x="628" y="298" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600789099130">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="628" y="298" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1600789099130" />
     <state x="654" y="416" key="#com.intellij.framework.addSupport.AddSupportForSingleFrameworkDialog" timestamp="1600321725072">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -270,9 +271,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="336" y="0" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1600346823117" />
-    <state x="452" y="186" key="Vcs.Push.Dialog.v2" timestamp="1600348265840">
+    <state x="452" y="186" key="Vcs.Push.Dialog.v2" timestamp="1600355454950">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="452" y="186" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600348265840" />
+    <state x="452" y="186" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1600355454950" />
   </component>
 </project>
