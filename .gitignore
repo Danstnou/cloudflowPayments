@@ -1,25 +1,19 @@
-# Project exclude paths
-/checking/target/avro/
-/checking/target/scala-2.12/classes/
-/checking/target/streams/
-/datamodel/target/avro/
-/datamodel/target/scala-2.12/classes/
-/datamodel/target/streams/
-/ingestor/target/avro/
-/ingestor/target/scala-2.12/classes/
-/ingestor/target/streams/
-/logger/target/avro/
-/logger/target/scala-2.12/classes/
-/logger/target/streams/
-/payments-pipeline/target/avro/
-/payments-pipeline/target/scala-2.12/classes/
-/payments-pipeline/target/streams/
-/postman/target/avro/
-/postman/target/scala-2.12/classes/
-/postman/target/streams/
-/processor/target/avro/
-/processor/target/scala-2.12/classes/
-/processor/target/streams/
-/project/project/target/
-/project/target/
-/target/streams/
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+# Maven
+log/
+target/
+
+# App
+out/
+*/target/**
+payments.code-workspace
+target-env.sbt.example

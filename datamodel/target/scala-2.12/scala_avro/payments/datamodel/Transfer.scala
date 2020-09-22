@@ -3,6 +3,7 @@ package payments.datamodel
 
 import scala.annotation.switch
 
+/** @param transfer перевод строчкой */
 case class Transfer(var transfer: String) extends org.apache.avro.specific.SpecificRecordBase {
   def this() = this("")
   def get(field$: Int): AnyRef = {
@@ -26,5 +27,5 @@ case class Transfer(var transfer: String) extends org.apache.avro.specific.Speci
 }
 
 object Transfer {
-  val SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Transfer\",\"namespace\":\"payments.datamodel\",\"fields\":[{\"name\":\"transfer\",\"type\":\"string\"}]}")
+  val SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Transfer\",\"namespace\":\"payments.datamodel\",\"fields\":[{\"name\":\"transfer\",\"type\":\"string\",\"doc\":\"перевод строчкой\"}]}")
 }

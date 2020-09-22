@@ -3,6 +3,11 @@ package payments.datamodel
 
 import scala.annotation.switch
 
+/**
+ * @param reason полезная информация
+ * @param message сообщение из stream'а (событие)
+ * @param level уровень логирования
+ */
 case class LogMessage(var reason: String, var message: String, var level: String) extends org.apache.avro.specific.SpecificRecordBase {
   def this() = this("", "", "")
   def get(field$: Int): AnyRef = {
@@ -38,5 +43,5 @@ case class LogMessage(var reason: String, var message: String, var level: String
 }
 
 object LogMessage {
-  val SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"LogMessage\",\"namespace\":\"payments.datamodel\",\"fields\":[{\"name\":\"reason\",\"type\":\"string\"},{\"name\":\"message\",\"type\":\"string\"},{\"name\":\"level\",\"type\":\"string\"}]}")
+  val SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"LogMessage\",\"namespace\":\"payments.datamodel\",\"fields\":[{\"name\":\"reason\",\"type\":\"string\",\"doc\":\"полезная информация\"},{\"name\":\"message\",\"type\":\"string\",\"doc\":\"сообщение из stream\'а (событие)\"},{\"name\":\"level\",\"type\":\"string\",\"doc\":\"уровень логирования\"}]}")
 }

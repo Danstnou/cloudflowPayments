@@ -5,15 +5,18 @@
     "fields":[
          {
             "name": "from",
-            "type": "string"
+            "type": "string",
+            "doc": "идентификатор инициатора платежа"
          },
          {
             "name": "to",
-            "type": "string"
+            "type": "string",
+            "doc": "идентификатор принимающей стороны"
          },
          {
             "name": "value",
-            "type": "long"
+            "type": "long",
+            "doc": "сумма перевода"
          }
     ]
 }

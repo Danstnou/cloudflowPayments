@@ -4,10 +4,10 @@
     "name": "Participant",
     "fields":[
          {
-            "name": "id", "type": "string"
+            "name": "id", "type": "string", "doc": "идентификатор участника"
          },
          {
-            "name": "balance", "type": "long"
+            "name": "balance", "type": "long", "doc": "стартовый баланс"
          }
     ]
 }

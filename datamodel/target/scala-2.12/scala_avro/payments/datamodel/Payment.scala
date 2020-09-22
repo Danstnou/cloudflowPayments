@@ -3,6 +3,11 @@ package payments.datamodel
 
 import scala.annotation.switch
 
+/**
+ * @param from идентификатор инициатора платежа
+ * @param to идентификатор принимающей стороны
+ * @param value сумма перевода
+ */
 case class Payment(var from: String, var to: String, var value: Long) extends org.apache.avro.specific.SpecificRecordBase {
   def this() = this("", "", 0L)
   def get(field$: Int): AnyRef = {
@@ -38,5 +43,5 @@ case class Payment(var from: String, var to: String, var value: Long) extends or
 }
 
 object Payment {
-  val SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Payment\",\"namespace\":\"payments.datamodel\",\"fields\":[{\"name\":\"from\",\"type\":\"string\"},{\"name\":\"to\",\"type\":\"string\"},{\"name\":\"value\",\"type\":\"long\"}]}")
+  val SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Payment\",\"namespace\":\"payments.datamodel\",\"fields\":[{\"name\":\"from\",\"type\":\"string\",\"doc\":\"идентификатор инициатора платежа\"},{\"name\":\"to\",\"type\":\"string\",\"doc\":\"идентификатор принимающей стороны\"},{\"name\":\"value\",\"type\":\"long\",\"doc\":\"сумма перевода\"}]}")
 }

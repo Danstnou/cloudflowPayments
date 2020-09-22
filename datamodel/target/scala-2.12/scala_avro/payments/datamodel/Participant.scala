@@ -3,6 +3,10 @@ package payments.datamodel
 
 import scala.annotation.switch
 
+/**
+ * @param id идентификатор участника
+ * @param balance стартовый баланс
+ */
 case class Participant(var id: String, var balance: Long) extends org.apache.avro.specific.SpecificRecordBase {
   def this() = this("", 0L)
   def get(field$: Int): AnyRef = {
@@ -32,5 +36,5 @@ case class Participant(var id: String, var balance: Long) extends org.apache.avr
 }
 
 object Participant {
-  val SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Participant\",\"namespace\":\"payments.datamodel\",\"fields\":[{\"name\":\"id\",\"type\":\"string\"},{\"name\":\"balance\",\"type\":\"long\"}]}")
+  val SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Participant\",\"namespace\":\"payments.datamodel\",\"fields\":[{\"name\":\"id\",\"type\":\"string\",\"doc\":\"идентификатор участника\"},{\"name\":\"balance\",\"type\":\"long\",\"doc\":\"стартовый баланс\"}]}")
 }
