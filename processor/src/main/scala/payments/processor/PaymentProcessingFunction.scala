@@ -36,9 +36,8 @@ class PaymentProcessingFunction(participantNotFoundMessage: String, successfulPa
     case Payment(from, to, value) =>
       val fromParticipant = state.get(from)
 
-      val withdrawnBalance = fromParticipant.balance - value
-      if (withdrawnBalance >= 0) {
-        state.put(from, fromParticipant.copy(balance = withdrawnBalance))
+      if (fromParticipant.balance >= value) {
+        state.put(from, fromParticipant.copy(balance = fromParticipant.balance - value))
 
         val toParticipant = state.get(to)
         state.put(to, toParticipant.copy(balance = toParticipant.balance + value))
@@ -48,3 +47,8 @@ class PaymentProcessingFunction(participantNotFoundMessage: String, successfulPa
         out.collect(LogMessage(lackFundsMessage, payment.toString, errorPaymentLevel))
   }
 }
+
+case class Transfer(transfer: String)
+case class Payment(from: String, to: String, value: Long)
+case class Participant(id: String, balance: Long)
+case class LogMessage(reason: String, message: String, level: String)
