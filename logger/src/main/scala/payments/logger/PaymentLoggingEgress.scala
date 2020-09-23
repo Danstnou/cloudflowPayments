@@ -7,10 +7,9 @@ import cloudflow.streamlets.avro._
 import payments.datamodel._
 
 class PaymentLoggingEgress extends AkkaStreamlet {
-  var inChecking  = AvroInlet[LogMessage]("in-checking")
-  var inProcessor = AvroInlet[LogMessage]("in-processor")
-
-  var shape: StreamletShape = StreamletShape.withInlets(inChecking, inProcessor)
+  val inChecking            = AvroInlet[LogMessage]("in-checking")
+  val inProcessor           = AvroInlet[LogMessage]("in-processor")
+  val shape: StreamletShape = StreamletShape.withInlets(inChecking, inProcessor)
 
   override protected def createLogic(): AkkaStreamletLogic = new AkkaStreamletLogic() {
     override def run(): Unit =

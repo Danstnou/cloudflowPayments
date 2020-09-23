@@ -17,3 +17,4 @@ out/
 */target/**
 payments.code-workspace
 target-env.sbt.example
+README.md
