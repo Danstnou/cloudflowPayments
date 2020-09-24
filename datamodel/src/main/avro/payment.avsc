@@ -17,6 +17,11 @@
             "name": "value",
             "type": "long",
             "doc": "сумма перевода"
+         },
+         {
+            "name": "currency",
+            "type": "string",
+            "doc": "валюта"
          }
     ]
 }

@@ -16,7 +16,7 @@ class CheckingProcessFunction(maskPayment: Regex, loggerTag: OutputTag[LogMessag
     extends ProcessFunction[Transfer, Payment] {
   override def processElement(transfer: Transfer, ctx: ProcessFunction[Transfer, Payment]#Context, out: Collector[Payment]): Unit =
     transfer match {
-      case Transfer(maskPayment(from, _, to, _, amount)) => out.collect(Payment(from, to, amount.toLong))
-      case _                                             => ctx.output(loggerTag, LogMessage(incorrectPaymentMessage, transfer.toString, incorrectPaymentLevel))
+      case Transfer(maskPayment(from, _, to, _, amount, currency)) => out.collect(Payment(from, to, amount.toLong, currency))
+      case _                                                       => ctx.output(loggerTag, LogMessage(incorrectPaymentMessage, transfer.toString, incorrectPaymentLevel))
     }
 }

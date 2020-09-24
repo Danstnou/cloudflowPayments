@@ -1,9 +1,9 @@
 package payments.checking
 
-import cloudflow.flink.{FlinkStreamlet, FlinkStreamletLogic}
+import cloudflow.flink.{ FlinkStreamlet, FlinkStreamletLogic }
 import cloudflow.streamlets._
 import cloudflow.streamlets.avro._
-import org.apache.flink.streaming.api.scala.{OutputTag, createTypeInformation}
+import org.apache.flink.streaming.api.scala.{ createTypeInformation, OutputTag }
 import payments.datamodel._
 
 import scala.util.matching.Regex

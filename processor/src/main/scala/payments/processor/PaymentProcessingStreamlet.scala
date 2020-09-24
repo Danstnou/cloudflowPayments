@@ -4,12 +4,7 @@ import cloudflow.flink._
 import cloudflow.streamlets.avro._
 import cloudflow.streamlets.{ StreamletShape, StringConfigParameter }
 import org.apache.flink.streaming.api.scala._
-import payments.processor.PaymentProcessingStreamlet._
 import payments.datamodel._
-
-object PaymentProcessingStreamlet {
-  val idBank = "myBank"
-}
 
 class PaymentProcessingStreamlet extends FlinkStreamlet {
   @transient val inInitialize          = AvroInlet[Participant]("in-initialize")
@@ -28,7 +23,7 @@ class PaymentProcessingStreamlet extends FlinkStreamlet {
       val stream: DataStream[LogMessage] =
         readStream(inInitialize)
           .connect(readStream(inChecking))
-          .keyBy(_ => idBank, _ => idBank)
+          .keyBy(_.currency, _.currency)
           .process(
             new PaymentProcessingFunction(ParticipantNotFoundMessageParameter.value,
                                           SuccessfulPaymentMessageParameter.value,
