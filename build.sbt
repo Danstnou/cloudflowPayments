@@ -42,7 +42,8 @@ lazy val ingestor = appModule("ingestor")
     libraryDependencies ++= Seq(
           "com.typesafe.akka" %% "akka-http-spray-json" % "10.1.12",
           "ch.qos.logback"    % "logback-classic"       % "1.2.3",
-          "org.scalatest"     %% "scalatest"            % "3.0.8" % "test"
+          "org.scalatest"     %% "scalatest"            % "3.0.8" % "test",
+          "com.lightbend.akka" %% "akka-stream-alpakka-file" % "2.0.2"
         )
   )
   .dependsOn(datamodel)

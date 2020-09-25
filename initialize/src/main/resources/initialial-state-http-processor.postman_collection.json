@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "d097a8fd-37f3-40f2-b174-9f29b7ef2535",
+		"_postman_id": "67721a30-22e0-4805-a222-c85ff42083d7",
 		"name": "initialial-state-http-processor",
 		"description": "Инициализация состояния (участников)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -13,7 +13,32 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\" : {{id}} , \"balance\" : {{balance}}\r\n}",
+					"raw": "{\r\n    \"id\" : {{id1}} , \"balance\" : {{startBalance}}, \"currency\" : {{rub}}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				},
+				"description": "Инициализация участника: 1"
+			},
+			"response": []
+		},
+		{
+			"name": "parpicipant-2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : {{id2}} , \"balance\" : {{startBalance}}, \"currency\" : {{rub}}\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -36,7 +61,7 @@
 		{
 			"listen": "prerequest",
 			"script": {
-				"id": "4bab9f65-f2d3-4bf4-862e-501394937bb5",
+				"id": "64f5837a-98c8-4f79-a778-fd151c1d06d3",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -46,7 +71,7 @@
 		{
 			"listen": "test",
 			"script": {
-				"id": "67e02cc4-4000-4c98-b3db-101431d95610",
+				"id": "50c6483d-69f0-4734-a096-240eab7614fb",
 				"type": "text/javascript",
 				"exec": [
 					""
@@ -56,14 +81,29 @@
 	],
 	"variable": [
 		{
-			"id": "8f5f1013-c1b7-43d1-b0f9-da3bf0fe7d0d",
-			"key": "id",
+			"id": "03ac46f2-a82d-4957-a327-914e40cfbccc",
+			"key": "id1",
 			"value": "\"a1\""
 		},
 		{
-			"id": "f327fb93-27fa-49eb-a233-7431318619cc",
-			"key": "balance",
+			"id": "0ed2af1d-1d1a-44d1-b8eb-34ef80905c08",
+			"key": "id2",
+			"value": "\"b1\""
+		},
+		{
+			"id": "5347d4c2-ddb4-4991-a7e7-6cca293552f0",
+			"key": "startBalance",
 			"value": "500"
+		},
+		{
+			"id": "8a3ae97d-9da6-48b9-94a4-ded7872de50e",
+			"key": "rub",
+			"value": "\"RUB\""
+		},
+		{
+			"id": "a7926e61-8035-426f-a463-449a47fa66a5",
+			"key": "usd",
+			"value": "\"USD\""
 		}
 	],
 	"protocolProfileBehavior": {}
