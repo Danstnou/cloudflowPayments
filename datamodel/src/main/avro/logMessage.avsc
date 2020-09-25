@@ -1,0 +1,22 @@
+{
+    "namespace": "payments.datamodel",
+    "type": "record",
+    "name": "LogMessage",
+    "fields":[
+         {
+            "name": "reason",
+            "type": "string",
+            "doc": "полезная информация"
+         },
+         {
+            "name": "message",
+            "type": "string",
+            "doc": "сообщение из stream'а (событие)"
+         },
+         {
+            "name": "level",
+            "type": "string",
+            "doc": "уровень логирования"
+         }
+    ]
+}

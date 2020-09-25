@@ -1,0 +1,12 @@
+{
+    "namespace": "payments.datamodel",
+    "type": "record",
+    "name": "Transfer",
+    "fields":[
+         {
+            "name": "transfer",
+            "type": "string",
+            "doc": "перевод строчкой"
+         }
+    ]
+}

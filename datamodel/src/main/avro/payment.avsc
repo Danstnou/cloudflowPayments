@@ -1,0 +1,27 @@
+{
+    "namespace": "payments.datamodel",
+    "type": "record",
+    "name": "Payment",
+    "fields":[
+         {
+            "name": "from",
+            "type": "string",
+            "doc": "идентификатор инициатора платежа"
+         },
+         {
+            "name": "to",
+            "type": "string",
+            "doc": "идентификатор принимающей стороны"
+         },
+         {
+            "name": "value",
+            "type": "long",
+            "doc": "сумма перевода"
+         },
+         {
+            "name": "currency",
+            "type": "string",
+            "doc": "валюта"
+         }
+    ]
+}
