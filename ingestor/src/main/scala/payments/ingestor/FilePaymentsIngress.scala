@@ -2,6 +2,7 @@ package payments.ingestor
 
 import java.nio.file.FileSystems
 
+import akka.stream.alpakka.file.DirectoryChange
 import akka.stream.alpakka.file.scaladsl.DirectoryChangesSource
 import akka.stream.scaladsl._
 import akka.util.ByteString
@@ -33,7 +34,9 @@ class FilePaymentsIngress extends AkkaStreamlet {
 
     override def run(): Unit = {
       val fs = FileSystems.getDefault
-      val changes = DirectoryChangesSource(fs.getPath(catalog), pollInterval = 100.millisecond, maxBufferSize = 1000).map(pair => pair._1)
+      val changes = DirectoryChangesSource(fs.getPath(catalog), pollInterval = 100.millisecond, maxBufferSize = 1000)
+        .filter(_._2 == DirectoryChange.Creation)
+        .map(pair => pair._1)
 
       changes
         .filter(_.getFileName.toString.matches(maskFile))
