@@ -35,7 +35,7 @@ class FilePaymentsIngress extends AkkaStreamlet {
     override def run(): Unit = {
       val fs = FileSystems.getDefault
       val changes = DirectoryChangesSource(fs.getPath(catalog), pollInterval = 100.millisecond, maxBufferSize = 1000)
-        .filter(_._2 == DirectoryChange.Creation)
+        .filter(pair => pair._2 == DirectoryChange.Creation && pair._2 != DirectoryChange.Deletion)
         .map(_._1)
 
       changes
