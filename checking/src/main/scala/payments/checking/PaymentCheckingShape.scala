@@ -1,7 +1,7 @@
 package payments.checking
 
-import cloudflow.streamlets.avro.{ AvroInlet, AvroOutlet }
-import payments.datamodel.{ LogMessage, Payment, Transfer }
+import cloudflow.streamlets.avro.{AvroInlet, AvroOutlet}
+import payments.datamodel.{LogMessage, Payment, Transfer}
 
 trait PaymentCheckingShape {
 
