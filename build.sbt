@@ -1,6 +1,7 @@
 import sbt._
 import sbt.Keys._
 import cloudflow.sbt.CommonSettingsAndTasksPlugin._
+val AkkaVersion = "2.6.9"
 
 lazy val root =
   Project(id = "root", base = file("."))
@@ -40,9 +41,9 @@ lazy val ingestor = appModule("ingestor")
   .settings(
     commonSettings,
     libraryDependencies ++= Seq(
-          "com.typesafe.akka" %% "akka-http-spray-json" % "10.1.12",
-          "ch.qos.logback"    % "logback-classic"       % "1.2.3",
-          "org.scalatest"     %% "scalatest"            % "3.0.8" % "test",
+          "com.typesafe.akka"  %% "akka-http-spray-json"     % "10.1.12",
+          "ch.qos.logback"     % "logback-classic"           % "1.2.3",
+          "org.scalatest"      %% "scalatest"                % "3.0.8" % "test",
           "com.lightbend.akka" %% "akka-stream-alpakka-file" % "2.0.2"
         )
   )
@@ -54,7 +55,8 @@ lazy val checking = appModule("checking")
     commonSettings,
     libraryDependencies ++= Seq(
           "ch.qos.logback" % "logback-classic" % "1.2.3",
-          "org.scalatest"  %% "scalatest"      % "3.0.8" % "test"
+          "org.scalatest"  %% "scalatest"      % "3.0.8" % "test",
+          "org.apache.flink" %% "flink-connector-cassandra" % "1.11.2"
         )
   )
   .settings(
@@ -93,8 +95,10 @@ lazy val logger = appModule("logger")
   .settings(
     commonSettings,
     libraryDependencies ++= Seq(
-          "ch.qos.logback" % "logback-classic" % "1.2.3",
-          "org.scalatest"  %% "scalatest"      % "3.0.8" % "test"
+          "ch.qos.logback"     % "logback-classic"                % "1.2.3",
+          "org.scalatest"      %% "scalatest"                     % "3.0.8" % "test",
+          "com.typesafe.akka"  %% "akka-persistence-cassandra"    % "1.0.4",
+          "com.lightbend.akka" %% "akka-stream-alpakka-cassandra" % "2.0.2"
         )
   )
   .dependsOn(datamodel)
@@ -126,5 +130,6 @@ lazy val commonSettings = Seq(
       ),
   scalacOptions in (Compile, console) --= Seq("-Ywarn-unused", "-Ywarn-unused-import"),
   scalacOptions in (Test, console) := (scalacOptions in (Compile, console)).value,
-  runLocalConfigFile := Some("datamodel/src/main/resources/local.conf")
+  runLocalConfigFile := Some("payments-pipeline/src/main/resources/local.conf"),
+  runLocalLog4jConfigFile := Some("payments-pipeline/src/main/resources/log4j.properties")
 )

@@ -4,12 +4,17 @@
     "name": "Payment",
     "fields":[
          {
-            "name": "from",
+            "name": "id",
+            "type": "string",
+            "doc": "идентификатор платежа"
+         },
+         {
+            "name": "fromParticipant",
             "type": "string",
             "doc": "идентификатор инициатора платежа"
          },
          {
-            "name": "to",
+            "name": "toParticipant",
             "type": "string",
             "doc": "идентификатор принимающей стороны"
          },
